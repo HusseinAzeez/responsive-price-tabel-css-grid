@@ -1,35 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     background: #262626;
-    text-align: center;
-    font-size: 30px;
+    font-size: 16px;
+    margin: 0;
 }
 
 .main-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px 0px;
+    margin: 30px;
 }
 
 .price-table {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    text-align: center;
 }
 
 .price-box {
     position: relative;
     overflow: hidden;
-    font-size: 0.8em;
     padding: 20px 20px;
     border-radius: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
@@ -44,7 +36,6 @@ body {
     width: 100%;
     height: 40%;
     background: rgba(255, 255, 255, 0.1);
-    z-index: 1;
     transform: skewY(-3deg) scale(1.5);
 }
 
@@ -73,7 +64,6 @@ body {
 
 .price-box a {
     position: relative;
-    z-index: 2;
     background: #ffffff;
     color: #262626;
     width: 150px;
@@ -81,9 +71,8 @@ body {
     line-height: 40px;
     border-radius: 40px;
     display: block;
-    text-align: center;
     margin: 20px auto;
-    font-size: 0.8em;
+    font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
@@ -92,47 +81,58 @@ body {
 .title .fas,
 .title .fa {
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 3rem;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    text-align: center;
     line-height: 100px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .title h2 {
     position: relative;
-    margin: 20px 0 0;
+    margin: 20px 0 0 0;
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 2rem;
 }
 
 .price {
     position: relative;
-    z-index: 2;
 }
 
 .price h4 {
     padding: 20px 0;
+    margin: 0;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 4rem;
 }
 
 .option {
     position: relative;
-    z-index: 2;
 }
 
 .option ul li {
-    margin: 0 0 10px;
+    margin: 0 0 10px 0;
     list-style: none;
     color: #ffffff;
-    font-size: 1em;
+    font-size: 1rem;
+    text-align: center;
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
     .price-table {
-        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .price-box:nth-child(1) {
+        grid-row-start: 1;
+    }
+
+    .price-box:nth-child(2) {
+        grid-row-start: 2;
+    }
+
+    .price-box:nth-child(3) {
+        grid-row-start: 3;
     }
 }
