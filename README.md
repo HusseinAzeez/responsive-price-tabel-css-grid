@@ -1,1 +1,1 @@
-# Resposive Price Tabel with CSS Grid
+# Responsive Price Table with CSS Grid
